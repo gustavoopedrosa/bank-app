@@ -1,3 +1,12 @@
+html {
+  font-size: 63%;
+}
+
+:root {
+  --purple: #8640b8;
+  --light-purple: #a24be0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
