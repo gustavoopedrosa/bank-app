@@ -1,0 +1,28 @@
+.pill {
+    width: 85%;
+    margin: 2.5rem 3rem;
+    padding: .5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    border-radius: 1rem;
+
+    &__icon {
+        height: 2.4rem;
+        margin: 0 2rem 0 1.5rem;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    &__value {
+        margin-right: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

@@ -12,6 +12,7 @@ const FIELDTYPES = [
         title: 'Conta',
         currency: 'R$',
         value: '999,99',
+        border: false
     },
     {
         id: 'cred-card',
@@ -21,8 +22,7 @@ const FIELDTYPES = [
         value: '1.999,00',
         subtitle: 'Fatura atual',
         description: 'Limite disponível de R$ 500,00',
-        parcel: 'Parcelar compras',
-        border: true
+        parcel: 'Parcelar compras'
     },
     {
         id: 'lending',
@@ -65,11 +65,11 @@ function identifyType(id) {
 function verifyParcel (id) {
     const type = identifyType(id)
     
-        if(type.parcel === undefined) {
-
-        } else {
-            return <div className="generic-field__parcel">{type.parcel}</div>
-        } 
+    if(type.parcel === undefined) {
+        
+    } else {
+        return <div className="generic-field__parcel">{type.parcel}</div>
+    } 
 }
 
 const GenericField = function ({ id }) {
@@ -77,7 +77,7 @@ const GenericField = function ({ id }) {
 
     return (
         <div className="generic-field">
-            <img src={type.icon} className="generic-field__icon" />
+            <img src={type.icon} className="generic-field__icon"/>
             <h2 className="generic-field__title">{type.title}</h2>
             <h3 className="generic-field__subtitle">{type.subtitle}</h3>
             <p className="generic-field__value">{type.currency} {type.value}</p>

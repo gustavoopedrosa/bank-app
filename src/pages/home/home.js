@@ -1,5 +1,6 @@
 import React from "react"
 import GenericField from "../../components/GenericField/generic-field"
+import Pill from "../../components/Pill/pill"
 import './home.scss'
 
 const name = 'Gustavo'
@@ -60,12 +61,15 @@ const Header = function () {
                 <p className="header__title">Olá, {name}</p>
             </header>
             <main>
-                <GenericField id='account'/>
-                <GenericField id='cred-card'/>
-                <GenericField id='lending'/>
-                <GenericField id='investment'/>
-                <GenericField id='life'/>
-                <GenericField id='shopping'/>
+                <GenericField id="account" />
+                <Pill id='cards' />
+                <GenericField id="cred-card" />
+                <GenericField id="lending" />
+                <GenericField id="investment" />
+                <Pill id='piece' />
+                <Pill id='balance' />
+                <GenericField id="life" />
+                <GenericField id="shopping" />
             </main>
         </div>
     )

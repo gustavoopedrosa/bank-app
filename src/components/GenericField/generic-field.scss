@@ -6,7 +6,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+
 
     img {
         margin-left: .5rem;
@@ -16,7 +17,7 @@
     &__title {
         font-size: 2rem;
         margin: 1rem 0;
-        background-image: url(../../assets/angle-ssmall-right.png);
+        background-image: url(../../assets/angle-small-right.png);
         background-repeat: no-repeat;
         background-position: right;
     }
@@ -51,4 +52,5 @@
         width: 13rem;
         text-align: center;
     }
+
 }
