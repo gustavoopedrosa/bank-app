@@ -1,9 +1,69 @@
 import React from "react"
 import GenericField from "../../components/GenericField/generic-field"
 import Pill from "../../components/Pill/pill"
+import CardFuncions from "../../components/SliderFunctions/card-functions"
 import './home.scss'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Pagination } from 'swiper'
+import 'swiper/css'
+import globeIcon from '../../assets/globe.png'
+import codeIcon from '../../assets/codigo-de-barras.png'
+import transferIcon from '../../assets/transferir.png'
+import depoIcon from '../../assets/depositar.png'
+import handIcon from '../../assets/mao.png'
+import phoneIcon from '../../assets/smartphone.png'
+import dollarIcon from '../../assets/money.png'
+import heartIcon from '../../assets/heart.png'
 
 const name = 'Gustavo'
+
+const FUNCTIONS = [
+    {
+        id: 1,
+        icon: globeIcon,
+        title: 'Area pix'
+    },
+    {
+        id: 2,
+        icon: codeIcon,
+        title: 'Pagar'
+    },
+    {
+        id: 3,
+        icon: transferIcon,
+        title: 'Transferir'
+    },
+    {
+        id: 4,
+        icon: depoIcon,
+        title: 'Depositar'
+    },
+    {
+        id: 5,
+        icon: handIcon,
+        title: 'Pegar emprestado'
+    },
+    {
+        id: 6,
+        icon: phoneIcon,
+        title: 'Recarregar celular'
+    },
+    {
+        id: 7,
+        icon: dollarIcon,
+        title: 'Cobrar'
+    },
+    {
+        id: 8,
+        icon: heartIcon,
+        title: 'Doação'
+    },
+    {
+        id: 6,
+        icon: globeIconslider,
+        title: 'Transferir Internac.'
+    }
+]
 
 const Header = function () {
     return (
@@ -62,6 +122,18 @@ const Header = function () {
             </header>
             <main>
                 <GenericField id="account" />
+                <Swiper 
+                    slidesPerView={5}
+                >
+                    {
+                        FUNCTIONS.map(item => (
+                            <SwiperSlide key={item.id}>
+                                <CardFuncions key={item.id} item={item}/>
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+
                 <Pill id='cards' />
                 <GenericField id="cred-card" />
                 <GenericField id="lending" />
